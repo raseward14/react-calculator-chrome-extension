@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Thasadith&display=swap:wght@400');
+
+
+.App * {
+    text-align: center;
+    font-family: 'Thasadith', sans-serif;
+}
+
+.calc-wrapper {
+    margin: 10% auto;
+    opacity: 0.75;
+    height: 37vh;
+    width: 20vw;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(6, 6, 6, 0.718);
+    display: flex;
+    flex-flow: row wrap;
+}
+.calc-wrapper>* {
+    flex: 1 100%;
+}
+
+.return {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: rgb(1, 1, 1);
+    height: 25%;
+    color: white;
+    font-size: 44px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.return>* {
+    margin-right: 5%;
+}
+ 
+.interface-container {
+    height: 100%;
+}
+.interface {
+    height: 75%;
+    display: flex;
+    color: white;
+}
+
+.left-container {
+    flex-grow: 3;
+    display: flex;
+    padding: 0px;
+}
+.left-side {
+    display: flex;
+    flex-grow: 5;
+}
+
+tr.left-columns {
+    width: 33%;
+}
+.left-columns {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+.left-row {
+    display: flex;
+    border: 0.5px solid black;
+    flex-grow: 1;
+}
+.left-row:active {
+    background-color: rgba(171, 167, 167, 0.718);
+}
+.left-row > * {
+    margin: auto;
+}
+
+tr.left-center-column{
+    width: 34%;
+}
+.left-center-column {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    height: 80%;
+}
+.left-center-row {
+    display: flex;
+    border: 0.5px solid black;
+    height: 80%;
+}
+.left-center-row:active {
+    background-color: rgba(171, 167, 167, 0.718);
+}
+.left-center-row > * {
+    margin: auto;
+}
+
+tr.right-side {
+    width: 25%;
+}
+.right-side {
+    background-color: rgb(251, 134, 0);
+    border-bottom-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+.right-row {
+    display: flex;
+    border: 0.5px solid black;
+    height: 100%;
+}
+.right-row:active {
+    background-color: rgba(171, 167, 167, 0.718);
+}
+.right-row > * {
+    margin: auto;
+}
+
+.big {
+    font-size: 24px;
+}
+
+.right-corner {
+    border-bottom-right-radius: 15px;
+}
+
+.left-corner {
+    border-bottom-left-radius: 15px;
+    width: 201%;
+}
+
+.darker {
+    background-color: rgba(6, 6, 6, 0.718);
+
+}
+
+.fadedClass {
+    background-color: rgba(171, 167, 167, 0.718);
+}
