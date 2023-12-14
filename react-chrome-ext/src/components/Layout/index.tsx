@@ -7,33 +7,33 @@ const Layout = () => {
     const [display, setDisplay] = useState(0);
     const [value1, setValue1] = useState("");
     const [value2, setValue2] = useState("");
-    const [operator, setOperator] = useState(null);
+    const [operator, setOperator] = useState("");
     const [clear, setClear] = useState("AC");
 
     // when numbers are clicked we concat to create a value, display in return
-    const createNumber = (value) => {
+    const createNumber = (value: any) => {
         // first click - set value1 to the clicked value
-        if ((value1 === "") && (operator === null)) {
+        if ((value1 === "") && (operator === "")) {
             let newValue = "" + value;
             setValue1(newValue);
-            setDisplay(newValue);
+            setDisplay(JSON.parse(newValue));
             setClear("C");
         // keep concating on value1 until an operator is clicked
-        } else if((value1 !== "") && (operator === null)) {
+        } else if((value1 !== "") && (operator === "")) {
             let newValue = "" + value1 + value;
             setValue1(newValue);
-            setDisplay(newValue);
+            setDisplay(JSON.parse(newValue));
             setClear("C");
         // if an operator exists, neither condition above will be met, and we build value2
-        } else if((value2 === "") && (operator !== null || "cleared")) {
+        } else if((value2 === "") && (operator !== "" || "cleared")) {
             let secondValue = "" + value;
             setValue2(secondValue);
-            setDisplay(secondValue);
+            setDisplay(JSON.parse(secondValue));
             setClear("C");
         } else {
             let secondValue = "" + value2 + value;
             setValue2(secondValue);
-            setDisplay(secondValue);
+            setDisplay(JSON.parse(secondValue));
             setClear("C");
         }
     };
@@ -42,8 +42,8 @@ const Layout = () => {
     // if a prior number exists, execute -> value1, operator, value2 -> display in return state variable
 
     // when operators are clicked; store value, add operator
-    const operatorClicked = (value) => {
-        if ((operator === null) || (operator === "cleared")) { 
+    const operatorClicked = (value: any) => {
+        if ((operator === "") || (operator === "cleared")) { 
             setOperator(value);
             console.log(`operator is ${value}`)
         } else {
@@ -54,9 +54,9 @@ const Layout = () => {
                         const divide = () => {
                             let newDisplay = JSON.parse(value1) / JSON.parse(value2);
                             setDisplay(newDisplay);
-                            setValue1(newDisplay);
+                            setValue1(JSON.stringify(newDisplay));
                             setValue2("");
-                            setOperator(null);
+                            setOperator("");
                         };
                         divide();
                     }
@@ -68,9 +68,9 @@ const Layout = () => {
                         const multiply = () => {
                             let newDisplay = JSON.parse(value1) * JSON.parse(value2);
                             setDisplay(newDisplay);
-                            setValue1(newDisplay);
+                            setValue1(JSON.stringify(newDisplay));
                             setValue2("");
-                            setOperator(null);
+                            setOperator("");
                         };
                         multiply();
                     }
@@ -81,9 +81,9 @@ const Layout = () => {
                         const subtract = () => {
                             let newDisplay = JSON.parse(value1) - JSON.parse(value2);
                             setDisplay(newDisplay);
-                            setValue1(newDisplay);
+                            setValue1(JSON.stringify(newDisplay));
                             setValue2("");
-                            setOperator(null);
+                            setOperator("");
                         };
                         subtract();
                     }
@@ -97,7 +97,7 @@ const Layout = () => {
                             setDisplay(newDisplay);
                             setValue1(newDisplay);
                             setValue2("");
-                            setOperator(null);
+                            setOperator("");
                         };
                         add();
                     };
@@ -106,7 +106,7 @@ const Layout = () => {
                     const equal = () => {
                         setValue1(value2);
                         setValue2("");
-                        setOperator(null);
+                        setOperator("");
 
                     };
                     break;
@@ -115,42 +115,42 @@ const Layout = () => {
     };
 
     // when percent is clicked, change the value, move decimal place twice to the left
-    const makePercent= (value) => {
+    const makePercent= (value: any) => {
         let newValue = value/100;
         if(operator) {
-            setValue2(newValue);
+            setValue2(JSON.stringify(newValue));
             setDisplay(newValue);
         } else {
-            setValue1(newValue);
+            setValue1(JSON.stringify(newValue));
             setDisplay(newValue);
         };
     };
 
     // when +/- is clicked, change from positive to negative, and from negative to positive
-    const positiveNegative = (value) => {
+    const positiveNegative = (value: any) => {
         let newValue = value *= -1;
         if(operator) {
-            setValue2(newValue);
+            setValue2(JSON.stringify(newValue));
             setDisplay(newValue);
         } else {
-            setValue1(newValue);
+            setValue1(JSON.stringify(newValue));
             setDisplay(newValue);
         };
     };
 
     // when C is clicked, clear all values, and operators
     const clearValues = () => {
-        if(value1 !== "" && ((operator === null) || (operator === "cleared")) && (value2 === "")) {
+        if(value1 !== "" && ((operator === "") || (operator === "cleared")) && (value2 === "")) {
             setValue1("");
             setDisplay(0);
             setClear("AC");
             console.log('clear value1 only')
             console.log(operator)
-        } else if((value1 !== "") && (operator !== null) && (value2 === "")) {
+        } else if((value1 !== "") && (operator !== "") && (value2 === "")) {
             setOperator("cleared")
             setClear("AC");
             console.log('clear operator only')
-        } else if((value1 !== "") && (operator !== null) && (value2 !== "")) {
+        } else if((value1 !== "") && (operator !== "") && (value2 !== "")) {
             setValue2("")
             setDisplay(0);
             setClear("AC");
@@ -158,7 +158,7 @@ const Layout = () => {
         } else {
             setValue1("");
             setValue2("");
-            setOperator(null)
+            setOperator("")
             setDisplay(0);
             setClear("AC");
             console.log('clear everything')
