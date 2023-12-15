@@ -309,7 +309,7 @@ const Layout = () => {
                                 }}>
                                 <td>+</td>
                             </tr>
-                            <tr className='right-row right-corner bold'
+                            <tr className='right-row right-corner big'
                                 onClick={() => {
                                     operatorClicked('=');
                                 }}>
