@@ -2,8 +2,9 @@
 
 
 .App * {
-    text-align: center;
     font-family: 'Thasadith', sans-serif;
+    width: auto;
+    /* height: auto; */
 }
 
 .calc-wrapper {
@@ -62,6 +63,8 @@ tr.left-columns {
     display: flex;
     border: 0.5px solid black;
     flex-grow: 1;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 .left-row:active {
     background-color: rgba(171, 167, 167, 0.718);
