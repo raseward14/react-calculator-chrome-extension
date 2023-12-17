@@ -1,7 +1,6 @@
-/* .App {
-  color: white;
-  text-align: center;
-} */
+body {
+  border-radius: 5px;
+}
 
 .container {
     width: 10rem;
