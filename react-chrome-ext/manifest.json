@@ -6,6 +6,6 @@
     "action": {
         "default_popup": "js/index.html",
         "default_title": "React Chrome Extension",
-        "default-icon": "./src/components/images/icon.png"
+        "default-icon": "icon.png"
     }
 }
