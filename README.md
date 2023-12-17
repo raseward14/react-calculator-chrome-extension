@@ -50,3 +50,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Resources
 [Medium: Creating a Chrome Extension with React: A Step-by-Step Guide](https://medium.com/@tharshita13/creating-a-chrome-extension-with-react-a-step-by-step-guide-47fe9bab24a1)
+[Udemy: Typescript: The Complete Developer's Guide](https://www.udemy.com/course/typescript-the-complete-developers-guide/learn/lecture/14504488#overview)
