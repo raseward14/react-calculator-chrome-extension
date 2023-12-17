@@ -66,6 +66,9 @@ tr.left-columns {
 .left-row:active {
     background-color: rgba(171, 167, 167, 0.718);
 }
+.left-row:hover {
+    cursor: pointer;
+}
 .left-row > * {
     margin: auto;
 }
@@ -85,6 +88,9 @@ tr.left-center-column{
 }
 .left-center-row:active {
     background-color: rgba(171, 167, 167, 0.718);
+}
+.left-center-row:hover {
+    cursor: pointer;
 }
 .left-center-row > * {
     margin: auto;
@@ -107,6 +113,9 @@ tr.right-side {
 }
 .right-row:active {
     background-color: rgba(171, 167, 167, 0.718);
+}
+.right-row:hover {
+    cursor: pointer;
 }
 .right-row > * {
     margin: auto;
