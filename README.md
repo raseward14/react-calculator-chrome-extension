@@ -11,6 +11,7 @@ This extension is built with Typescript, and React.js.
 * [Usage](#usage)
 * [Scripts](#scripts)
 * [Questions](#questions)
+* [Resources](#resources)
 
 
 ## Installation
@@ -21,7 +22,7 @@ This extension is built with Typescript, and React.js.
 
 ## Usage
 * **Install in Google Chrome!**  
-![Google Chrome Extension](reach-chrome-ext/src/components/images/chrome-extension.png)
+![Google Chrome Extension](react-chrome-ext/src/components/images/chrome-extension.png)
 
 ## Scripts
 In the project directory, you can run:
@@ -43,3 +44,9 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## Questions
+**[Contact me](https://sleepy-reaches-69699.herokuapp.com/)**
+
+## Resources
+[Medium: Creating a Chrome Extension with React: A Step-by-Step Guide](https://medium.com/@tharshita13/creating-a-chrome-extension-with-react-a-step-by-step-guide-47fe9bab24a1)
