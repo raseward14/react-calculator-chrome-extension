@@ -129,12 +129,14 @@ const Layout = () => {
     // when +/- is clicked, change from positive to negative, and from negative to positive
     const positiveNegative = (value: any) => {
         let newValue = value *= -1;
-        if(operator) {
+        if(value2) {
             setValue2(JSON.stringify(newValue));
             setDisplay(newValue);
-        } else {
+        } else if (value1) {
             setValue1(JSON.stringify(newValue));
             setDisplay(newValue);
+        } else {
+            console.log('no values yet!')
         };
     };
 
