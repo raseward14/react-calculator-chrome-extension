@@ -1,4 +1,4 @@
-# MacOS calculator application clone
+# MacOS calculator application clone: Google Chrome Extension
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
