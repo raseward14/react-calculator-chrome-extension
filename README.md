@@ -15,10 +15,16 @@ This extension is built with Typescript, and React.js.
 
 
 ## Installation
-1. From GitHub, fork the repository, and run npm install from the root directory. 
-2. Then, from the react-chrome-ext directory, run npm install for the front end packages. 
-3. From there, run npm start from the root directory, on your local machine to run the code locally.
-4. Or, you can visit chrome://extensions/ and click Load unpacked, and click the dist folder you just built to run the extension in your browser.
+1. From GitHub, fork the repository. 
+2. Then, from the `react-chrome-ext` Folder, run `npm install` for the front end packages.
+3. From there, run `npm run build` to build the latest version of the extension.
+4. Run `npm start` from the root directory, on your local machine to run the code locally.
+
+To run the Chrome extension:
+1. Visit chrome://extensions/ in your browser.
+2. Toggle on `Developer mode`.
+3. Click `Load unpacked` button in the top left corner.
+4. Select the `dist` Folder inside of the `react-chrome-ext` project folder.
 
 ## Usage
 * **Install in Google Chrome!**  
@@ -39,9 +45,6 @@ You will also see any lint errors in the console.
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
